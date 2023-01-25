@@ -2,9 +2,6 @@
 
 namespace App\Http\Controllers;
 
-use App\Http\Controllers\Controller;
-use App\Models\DateTimeApi;
-use App\Models\User;
 use Carbon\Carbon;
 use Illuminate\Http\Request;
 

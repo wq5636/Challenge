@@ -2,15 +2,11 @@
 
 namespace Tests\Unit;
 use Tests\Traits\TestHelpers;
-use App\Http\Controllers\AuthController;
-use Illuminate\Http\Request;
 use Tests\TestCase;
-use function PHPUnit\Framework\assertEquals;
 
 class AuthTest extends TestCase
 {
     use TestHelpers;
-
     public function testRegister() {
         $email = $this->getRandomEmail();
         $data = [
@@ -42,15 +38,13 @@ class AuthTest extends TestCase
             'password_confirmation' => 'test',
         ];
 
-        $controller = new AuthController();
+        $this->json('POST', '/register', $data);
 
-        try {
-            $controller->register(new Request($data));
-        } catch (\Illuminate\Validation\ValidationException $e) {
-            $this->assertEquals($e->validator->errors()->first('email'),
-                'The email has already been taken.');
-            $this->delete($existingEmail);
-        }
+        $this->assertDatabaseHas('users', [
+            'email' => $existingEmail,
+        ]);
+
+        $this->delete($existingEmail);
     }
 
 

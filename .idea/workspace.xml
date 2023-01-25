@@ -1,14 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="fa020a71-7e80-430d-8e43-c9bc0cde1d15" name="Changes" comment="Route">
+    <list default="true" id="fa020a71-7e80-430d-8e43-c9bc0cde1d15" name="Changes" comment="1. Update tests&#10;2. Finish controllers">
+      <change afterPath="$PROJECT_DIR$/tests/Unit/DateTest.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/0080e31f-8afd-43a9-ac2e-868e17cbe30d.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/0080e31f-8afd-43a9-ac2e-868e17cbe30d.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.phpunit.result.cache" beforeDir="false" afterPath="$PROJECT_DIR$/.phpunit.result.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/AuthController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/AuthController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/DateTimeController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/DateTimeController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Models/DateTimeApi.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/DateTimeApi.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/storage/logs/laravel.log" beforeDir="false" afterPath="$PROJECT_DIR$/storage/logs/laravel.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/Traits/TestHelpers.php" beforeDir="false" afterPath="$PROJECT_DIR$/tests/Traits/TestHelpers.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tests/Unit/AuthTest.php" beforeDir="false" afterPath="$PROJECT_DIR$/tests/Unit/AuthTest.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -145,7 +142,7 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "/Users/mac/Documents/laravel/Challenge/tests/Traits",
+    "last_opened_file_path": "/Users/mac/Documents/laravel/Challenge/tests/Unit",
     "nodejs_package_manager_path": "npm",
     "vue.rearranger.settings.migration": "true"
   },
@@ -157,28 +154,29 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/tests/Unit" />
       <recent name="$PROJECT_DIR$/tests/Traits" />
     </key>
   </component>
-  <component name="RunManager" selected="PHPUnit.AuthTest.testRegister">
+  <component name="RunManager" selected="PHPUnit.WeeksTest">
     <configuration name="AuthTest" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
       <TestRunner class="Tests\Unit\AuthTest" configuration_file="$PROJECT_DIR$/phpunit.xml" file="$PROJECT_DIR$/tests/Unit/AuthTest.php" scope="Class" />
-      <method v="2" />
-    </configuration>
-    <configuration name="AuthTest.logout_deletes_tokens" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
-      <TestRunner class="Tests\Unit\AuthTest" configuration_file="$PROJECT_DIR$/phpunit.xml" file="$PROJECT_DIR$/tests/Unit/AuthTest.php" method="logout_deletes_tokens" scope="Method" />
-      <method v="2" />
-    </configuration>
-    <configuration name="AuthTest.testRegister" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
-      <TestRunner class="Tests\Unit\AuthTest" configuration_file="$PROJECT_DIR$/phpunit.xml" file="$PROJECT_DIR$/tests/Unit/AuthTest.php" method="testRegister" scope="Method" />
       <method v="2" />
     </configuration>
     <configuration name="AuthTest.testRegisterWithExistingEmail" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
       <TestRunner class="Tests\Unit\AuthTest" configuration_file="$PROJECT_DIR$/phpunit.xml" file="$PROJECT_DIR$/tests/Unit/AuthTest.php" method="testRegisterWithExistingEmail" scope="Method" />
       <method v="2" />
     </configuration>
-    <configuration name="DaysTest" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
-      <TestRunner class="Tests\Unit\DaysTest" configuration_file="$PROJECT_DIR$/phpunit.xml" file="$PROJECT_DIR$/tests/Unit/DaysTest.php" scope="Class" />
+    <configuration name="DateTest" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
+      <TestRunner class="Tests\Unit\DateTest" configuration_file="$PROJECT_DIR$/phpunit.xml" file="$PROJECT_DIR$/tests/Unit/DateTest.php" scope="Class" />
+      <method v="2" />
+    </configuration>
+    <configuration name="DateTest.testDateEntryTwo" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
+      <TestRunner class="Tests\Unit\DateTest" configuration_file="$PROJECT_DIR$/phpunit.xml" file="$PROJECT_DIR$/tests/Unit/DateTest.php" method="testDateEntryTwo" scope="Method" />
+      <method v="2" />
+    </configuration>
+    <configuration name="WeeksTest" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
+      <TestRunner class="Tests\Unit\WeeksTest" configuration_file="$PROJECT_DIR$/phpunit.xml" file="$PROJECT_DIR$/tests/Unit/WeeksTest.php" scope="Class" />
       <method v="2" />
     </configuration>
     <configuration name="phpunit.xml" type="PHPUnitRunConfigurationType" factoryName="PHPUnit">
@@ -187,11 +185,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="PHPUnit.AuthTest.testRegister" />
-        <item itemvalue="PHPUnit.AuthTest.testRegisterWithExistingEmail" />
+        <item itemvalue="PHPUnit.WeeksTest" />
         <item itemvalue="PHPUnit.AuthTest" />
-        <item itemvalue="PHPUnit.DaysTest" />
-        <item itemvalue="PHPUnit.AuthTest.logout_deletes_tokens" />
+        <item itemvalue="PHPUnit.DateTest" />
+        <item itemvalue="PHPUnit.DateTest.testDateEntryTwo" />
+        <item itemvalue="PHPUnit.AuthTest.testRegisterWithExistingEmail" />
       </list>
     </recent_temporary>
   </component>
@@ -203,7 +201,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1674671700656</updated>
-      <workItem from="1674671701832" duration="9876000" />
+      <workItem from="1674671701832" duration="13512000" />
     </task>
     <task id="LOCAL-00001" summary="Initial commit: Roughly finish tests and migrations">
       <created>1674674166403</created>
@@ -219,7 +217,14 @@
       <option name="project" value="LOCAL" />
       <updated>1674674895884</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="1. Update tests&#10;2. Finish controllers">
+      <created>1674681641462</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1674681641462</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -230,6 +235,7 @@
     <option name="CHECK_NEW_TODO" value="false" />
     <MESSAGE value="Initial commit: Roughly finish tests and migrations" />
     <MESSAGE value="Route" />
-    <option name="LAST_COMMIT_MESSAGE" value="Route" />
+    <MESSAGE value="1. Update tests&#10;2. Finish controllers" />
+    <option name="LAST_COMMIT_MESSAGE" value="1. Update tests&#10;2. Finish controllers" />
   </component>
 </project>
