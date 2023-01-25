@@ -2,9 +2,8 @@
 
 namespace Tests\Traits;
 
-use App\Http\Controllers\DateTimeController;
 use App\Models\User;
-use Illuminate\Http\Request;
+use Illuminate\Testing\TestResponse;
 
 trait TestHelpers
 {
@@ -21,7 +20,7 @@ trait TestHelpers
 
     /**
      * @param $email
-     * @return null
+     * @return object|null
      */
     public function findUserByEmail($email) {
         $user = User::where('email', $email)->first();
@@ -65,7 +64,7 @@ trait TestHelpers
      * Create a fake random user,
      * return the generated random email.
      *
-     * @return string
+     * @return string email
      */
     public function createRandomUser() {
         $email = $this->getRandomEmail();
@@ -90,10 +89,8 @@ trait TestHelpers
 
 
     /**
-     * Sign in a user.
-     *
-     * @param $email
-     * @return $this
+     * Return the email of the sign-in user
+     * @return string email
      */
     public function signIn() {
         $user = User::factory(1)->create()->first();
@@ -107,12 +104,11 @@ trait TestHelpers
      * return the result of calculating the day gap.
      *
      * @param array $attribute
-     * @return \Illuminate\Http\JsonResponse
+     * @return TestResponse
      */
     public function daysEntry(array $attribute) {
         $email = $this->signIn();
-        $dateTimeController = new DateTimeController();
-        $response = $dateTimeController->days(new Request($attribute));
+        $response = $this->json('POST', '/api/days', $attribute);
         $this->delete($email);
         return $response;
     }
@@ -123,12 +119,11 @@ trait TestHelpers
      * return the result of calculating the week gap.
      *
      * @param array $attribute
-     * @return \Illuminate\Http\JsonResponse
+     * @return TestResponse
      */
     public function weeksEntry(array $attribute) {
         $email = $this->signIn();
-        $dateTimeController = new DateTimeController();
-        $response = $dateTimeController->weeks(new Request($attribute));
+        $response = $this->json('POST', '/api/weeks', $attribute);
         $this->delete($email);
         return $response;
     }

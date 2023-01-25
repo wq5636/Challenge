@@ -5,6 +5,8 @@ use Tests\Traits\TestHelpers;
 use App\Http\Controllers\AuthController;
 use Illuminate\Http\Request;
 use Tests\TestCase;
+use function PHPUnit\Framework\assertEquals;
+
 class AuthTest extends TestCase
 {
     use TestHelpers;
@@ -18,8 +20,7 @@ class AuthTest extends TestCase
             'password_confirmation' => 'test',
         ];
 
-        $controller = new AuthController();
-        $response = $controller->register(new Request($data));
+        $response = $this->json('POST', '/api/register', $data);
 
         $this->assertEquals(201, $response->getStatusCode());
         $data = json_decode($response->getContent(), true);
@@ -62,11 +63,10 @@ class AuthTest extends TestCase
             'password' => bcrypt($password),
         ]);
 
-        $controller = new AuthController();
-        $response = $controller->login(new Request([
+        $response = $this->json('POST', '/api/login', [
             'email' => $email,
             'password' => $password,
-        ]));
+        ]);
 
         $this->assertEquals(200, $response->getStatusCode());
         $data = json_decode($response->getContent(), true);
@@ -79,10 +79,29 @@ class AuthTest extends TestCase
 
     public function testLogout() {
         $email = $this->signIn();
-        $controller = new AuthController();
-        $response = $controller->logout();
+        $token = auth()->user()->tokens();
+        $data = [
+            'token' => $token,
+        ];
+        $response = $this->json('POST', '/api/logout', $data);
         $this->assertEquals(200, $response->getStatusCode());
+        $this->delete($email);
+    }
 
+
+    /** @test */
+    public function testLogoutDeleteTokens()
+    {
+        $email = $this->signIn();
+        $headers = [
+            'Accept' => 'application/json',
+            'Authorization' => 'Bearer '.auth()->user()->createToken('test')->plainTextToken,
+        ];
+        $this->assertCount(1, auth()->user()->tokens);
+        $response = $this->json('POST', '/api/logout', $headers);
+        $response->assertStatus(200);
+        $response->assertJson(['message' => 'Successfully logged out']);
+        $this->assertCount(0, auth()->user()->fresh()->tokens);
         $this->delete($email);
     }
 }
