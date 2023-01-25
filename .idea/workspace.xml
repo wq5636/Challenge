@@ -2,12 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="fa020a71-7e80-430d-8e43-c9bc0cde1d15" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/0080e31f-8afd-43a9-ac2e-868e17cbe30d.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/0080e31f-8afd-43a9-ac2e-868e17cbe30d.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.phpunit.result.cache" beforeDir="false" afterPath="$PROJECT_DIR$/.phpunit.result.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2023_01_25_184723_create_date_time_apis_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2023_01_25_184723_create_date_time_api_table.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/storage/logs/laravel.log" beforeDir="false" afterPath="$PROJECT_DIR$/storage/logs/laravel.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/Unit/DateTest.php" beforeDir="false" afterPath="$PROJECT_DIR$/tests/Unit/DateTest.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -159,21 +156,21 @@
       <recent name="$PROJECT_DIR$/tests/Traits" />
     </key>
   </component>
-  <component name="RunManager" selected="PHPUnit.WeeksTest">
-    <configuration name="AuthTest" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
-      <TestRunner class="Tests\Unit\AuthTest" configuration_file="$PROJECT_DIR$/phpunit.xml" file="$PROJECT_DIR$/tests/Unit/AuthTest.php" scope="Class" />
-      <method v="2" />
-    </configuration>
-    <configuration name="AuthTest.testRegisterWithExistingEmail" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
-      <TestRunner class="Tests\Unit\AuthTest" configuration_file="$PROJECT_DIR$/phpunit.xml" file="$PROJECT_DIR$/tests/Unit/AuthTest.php" method="testRegisterWithExistingEmail" scope="Method" />
-      <method v="2" />
-    </configuration>
+  <component name="RunManager" selected="PHPUnit.DateTest">
     <configuration name="DateTest" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
       <TestRunner class="Tests\Unit\DateTest" configuration_file="$PROJECT_DIR$/phpunit.xml" file="$PROJECT_DIR$/tests/Unit/DateTest.php" scope="Class" />
       <method v="2" />
     </configuration>
-    <configuration name="DateTest.testDateEntryTwo" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
-      <TestRunner class="Tests\Unit\DateTest" configuration_file="$PROJECT_DIR$/phpunit.xml" file="$PROJECT_DIR$/tests/Unit/DateTest.php" method="testDateEntryTwo" scope="Method" />
+    <configuration name="DateTest.testQueryStored" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
+      <TestRunner class="Tests\Unit\DateTest" configuration_file="$PROJECT_DIR$/phpunit.xml" file="$PROJECT_DIR$/tests/Unit/DateTest.php" method="testQueryStored" scope="Method" />
+      <method v="2" />
+    </configuration>
+    <configuration name="DateTest.testQueryStoredDays" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
+      <TestRunner class="Tests\Unit\DateTest" configuration_file="$PROJECT_DIR$/phpunit.xml" file="$PROJECT_DIR$/tests/Unit/DateTest.php" method="testQueryStoredDays" scope="Method" />
+      <method v="2" />
+    </configuration>
+    <configuration name="DateTest.testQueryStoredWeeks" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
+      <TestRunner class="Tests\Unit\DateTest" configuration_file="$PROJECT_DIR$/phpunit.xml" file="$PROJECT_DIR$/tests/Unit/DateTest.php" method="testQueryStoredWeeks" scope="Method" />
       <method v="2" />
     </configuration>
     <configuration name="WeeksTest" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
@@ -186,11 +183,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="PHPUnit.WeeksTest" />
-        <item itemvalue="PHPUnit.AuthTest" />
         <item itemvalue="PHPUnit.DateTest" />
-        <item itemvalue="PHPUnit.DateTest.testDateEntryTwo" />
-        <item itemvalue="PHPUnit.AuthTest.testRegisterWithExistingEmail" />
+        <item itemvalue="PHPUnit.DateTest.testQueryStoredWeeks" />
+        <item itemvalue="PHPUnit.DateTest.testQueryStoredDays" />
+        <item itemvalue="PHPUnit.DateTest.testQueryStored" />
+        <item itemvalue="PHPUnit.WeeksTest" />
       </list>
     </recent_temporary>
   </component>
@@ -202,7 +199,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1674671700656</updated>
-      <workItem from="1674671701832" duration="15934000" />
+      <workItem from="1674671701832" duration="16701000" />
     </task>
     <task id="LOCAL-00001" summary="Initial commit: Roughly finish tests and migrations">
       <created>1674674166403</created>
@@ -232,7 +229,14 @@
       <option name="project" value="LOCAL" />
       <updated>1674685401782</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="README and table fix">
+      <created>1674687921577</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1674687921577</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -245,6 +249,7 @@
     <MESSAGE value="Route" />
     <MESSAGE value="1. Update tests&#10;2. Finish controllers" />
     <MESSAGE value="Adding more tests and minor update" />
-    <option name="LAST_COMMIT_MESSAGE" value="Adding more tests and minor update" />
+    <MESSAGE value="README and table fix" />
+    <option name="LAST_COMMIT_MESSAGE" value="README and table fix" />
   </component>
 </project>

@@ -7,6 +7,46 @@ class DateTest extends TestCase
 {
     use TestHelpers;
 
+    /**
+     * Test if user query has been store into database successfully
+     * for days()
+     * @return void
+     */
+    public function testQueryStoredDays() {
+        $email = $this->signIn();
+        $data = [
+            'start_date' => '2022-10-12',
+            'end_date' => '2022-12-23',
+        ];
+        $response = $this->json('POST', '/api/days', $data);
+
+        $this->assertDatabaseHas('date_time_api', [
+            'user_id' => auth()->user()->id,
+        ]);
+        $this->delete($email);
+    }
+
+
+    /**
+     * Test if user query has been store into database successfully
+     * for weeks()
+     * @return void
+     */
+    public function testQueryStoredWeeks() {
+        $email = $this->signIn();
+        $data = [
+            'start_date' => '2022-10-12',
+            'end_date' => '2022-12-23',
+        ];
+        $response = $this->json('POST', '/api/weeks', $data);
+
+        $this->assertDatabaseHas('date_time_api', [
+            'user_id' => auth()->user()->id,
+        ]);
+        $this->delete($email);
+    }
+
+
     public function testDateEntryOne() {
         $email = $this->signIn();
         $data = [
