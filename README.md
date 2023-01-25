@@ -1,7 +1,7 @@
 ## About 
 
 This project is running on PHP laravel 8. It provides a private API for acquiring the day/week difference
-between two dates, which are both optional to specify timezones. To access the private API:
+between two dates, which are both optional to specify timezones for. To access the private API:
 1. Navigate to the project folder via terminal. 
 2. Enter "php artisan serve". The server will be running on http://{host}:{port}/api/register. Default: http://127.0.0.1:8000/api/register 
 3. Create the database tables via command "php artisan migrate".
@@ -17,10 +17,10 @@ To use the API, POST the private token, with
 - end_timezone (optional)
 
 to http://127.0.0.1:8000/api/days to find out the number of days
-and http://127.0.0.1:8000/api/weeks to find out the number of whole weeks 
+or http://127.0.0.1:8000/api/weeks to find out the number of whole weeks 
 between start_date and end_date. 
 
-Each API access will be store in the table date_time_api
+Each API access record will be store in the table date_time_api.
 
 (Supported timezone are available on https://www.php.net/manual/en/timezones.php. If there is no timezone entry,
 it sets "UTC" as the default timezone.)
