@@ -976,7 +976,7 @@ sys|schema||mysql.sys|localhost|TRIGGER|G</Grants>
     <user id="242" parent="1" name="tyler">
       <Host>localhost</Host>
     </user>
-    <table id="243" parent="224" name="date_time_apis">
+    <table id="243" parent="224" name="date_time_api">
       <Engine>InnoDB</Engine>
       <CollationName>utf8mb4_unicode_ci</CollationName>
     </table>
@@ -1047,7 +1047,7 @@ sys|schema||mysql.sys|localhost|TRIGGER|G</Grants>
       <DataType>timestamp|0s</DataType>
       <Position>10</Position>
     </column>
-    <foreign-key id="259" parent="243" name="date_time_apis_user_id_foreign">
+    <foreign-key id="259" parent="243" name="date_time_api_user_id_foreign">
       <ColNames>user_id</ColNames>
       <RefColNames>id</RefColNames>
       <RefTableName>users</RefTableName>
@@ -1057,7 +1057,7 @@ sys|schema||mysql.sys|localhost|TRIGGER|G</Grants>
       <Type>btree</Type>
       <Unique>1</Unique>
     </index>
-    <index id="261" parent="243" name="date_time_apis_user_id_index">
+    <index id="261" parent="243" name="date_time_api_user_id_index">
       <ColNames>user_id</ColNames>
       <Type>btree</Type>
     </index>
@@ -1122,7 +1122,7 @@ sys|schema||mysql.sys|localhost|TRIGGER|G</Grants>
       <UnderlyingIndexName>failed_jobs_uuid_unique</UnderlyingIndexName>
     </key>
     <column id="274" parent="245" name="id">
-      <AutoIncrement>6</AutoIncrement>
+      <AutoIncrement>14</AutoIncrement>
       <DataType>int(10) unsigned|0s</DataType>
       <NotNull>1</NotNull>
       <Position>1</Position>
@@ -1166,7 +1166,7 @@ sys|schema||mysql.sys|localhost|TRIGGER|G</Grants>
       <Type>btree</Type>
     </index>
     <column id="283" parent="247" name="id">
-      <AutoIncrement>4</AutoIncrement>
+      <AutoIncrement>1</AutoIncrement>
       <DataType>bigint(20) unsigned|0s</DataType>
       <NotNull>1</NotNull>
       <Position>1</Position>
@@ -1231,7 +1231,7 @@ tokenable_id</ColNames>
       <UnderlyingIndexName>personal_access_tokens_token_unique</UnderlyingIndexName>
     </key>
     <column id="297" parent="248" name="id">
-      <AutoIncrement>7</AutoIncrement>
+      <AutoIncrement>1</AutoIncrement>
       <DataType>bigint(20) unsigned|0s</DataType>
       <NotNull>1</NotNull>
       <Position>1</Position>

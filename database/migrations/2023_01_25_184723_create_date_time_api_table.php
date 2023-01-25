@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateDateTimeApisTable extends Migration
+class CreateDateTimeApiTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,7 +13,7 @@ class CreateDateTimeApisTable extends Migration
      */
     public function up()
     {
-        Schema::create('date_time_apis', function (Blueprint $table) {
+        Schema::create('date_time_api', function (Blueprint $table) {
             $table->id();
             $table->unsignedBigInteger('user_id');
             $table->string('action');
@@ -36,6 +36,6 @@ class CreateDateTimeApisTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('date_time_apis');
+        Schema::dropIfExists('date_time_api');
     }
 }

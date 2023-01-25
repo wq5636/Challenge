@@ -1,12 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="fa020a71-7e80-430d-8e43-c9bc0cde1d15" name="Changes" comment="1. Update tests&#10;2. Finish controllers">
-      <change afterPath="$PROJECT_DIR$/tests/Unit/DateTest.php" afterDir="false" />
+    <list default="true" id="fa020a71-7e80-430d-8e43-c9bc0cde1d15" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/dataSources/0080e31f-8afd-43a9-ac2e-868e17cbe30d.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/0080e31f-8afd-43a9-ac2e-868e17cbe30d.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.phpunit.result.cache" beforeDir="false" afterPath="$PROJECT_DIR$/.phpunit.result.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/Unit/AuthTest.php" beforeDir="false" afterPath="$PROJECT_DIR$/tests/Unit/AuthTest.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2023_01_25_184723_create_date_time_apis_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2023_01_25_184723_create_date_time_api_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/logs/laravel.log" beforeDir="false" afterPath="$PROJECT_DIR$/storage/logs/laravel.log" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -201,7 +202,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1674671700656</updated>
-      <workItem from="1674671701832" duration="13512000" />
+      <workItem from="1674671701832" duration="15934000" />
     </task>
     <task id="LOCAL-00001" summary="Initial commit: Roughly finish tests and migrations">
       <created>1674674166403</created>
@@ -224,7 +225,14 @@
       <option name="project" value="LOCAL" />
       <updated>1674681641462</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Adding more tests and minor update">
+      <created>1674685401782</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1674685401782</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -236,6 +244,7 @@
     <MESSAGE value="Initial commit: Roughly finish tests and migrations" />
     <MESSAGE value="Route" />
     <MESSAGE value="1. Update tests&#10;2. Finish controllers" />
-    <option name="LAST_COMMIT_MESSAGE" value="1. Update tests&#10;2. Finish controllers" />
+    <MESSAGE value="Adding more tests and minor update" />
+    <option name="LAST_COMMIT_MESSAGE" value="Adding more tests and minor update" />
   </component>
 </project>

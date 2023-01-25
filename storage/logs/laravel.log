@@ -730,3 +730,15 @@
 #54 /Users/mac/Documents/laravel/Challenge/vendor/phpunit/phpunit/phpunit(98): PHPUnit\\TextUI\\Command::main()
 #55 {main}
 "} 
+[2023-01-25 22:57:47] local.ERROR: Cannot declare class CreateDateTimeApisTable, because the name is already in use {"exception":"[object] (Symfony\\Component\\ErrorHandler\\Error\\FatalError(code: 0): Cannot declare class CreateDateTimeApisTable, because the name is already in use at /Users/mac/Documents/laravel/Challenge/database/migrations/2023_01_25_184723_create_date_time_api_table.php:41)
+[stacktrace]
+#0 {main}
+"} 
+[2023-01-25 22:58:27] local.ERROR: Cannot declare class CreateDateTimeApisTable, because the name is already in use {"exception":"[object] (Symfony\\Component\\ErrorHandler\\Error\\FatalError(code: 0): Cannot declare class CreateDateTimeApisTable, because the name is already in use at /Users/mac/Documents/laravel/Challenge/database/migrations/2023_01_25_184723_create_date_time_api_table.php:41)
+[stacktrace]
+#0 {main}
+"} 
+[2023-01-25 23:02:48] local.ERROR: Cannot declare class CreateDateTimeApisTable, because the name is already in use {"exception":"[object] (Symfony\\Component\\ErrorHandler\\Error\\FatalError(code: 0): Cannot declare class CreateDateTimeApisTable, because the name is already in use at /Users/mac/Documents/laravel/Challenge/database/migrations/2023_01_25_184723_create_date_time_api_table.php:41)
+[stacktrace]
+#0 {main}
+"} 
